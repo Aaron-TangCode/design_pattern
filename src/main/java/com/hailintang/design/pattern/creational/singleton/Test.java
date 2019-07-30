@@ -13,11 +13,11 @@ import java.lang.reflect.InvocationTargetException;
  */
 public class Test {
     public static void main(String[] args) throws IOException, ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
-        Thread t1 = new Thread(new T());
-        Thread t2 = new Thread(new T());
-        t1.start();
-        t2.start();
-        System.out.println("Thread runs over");
+//        Thread t1 = new Thread(new T());
+//        Thread t2 = new Thread(new T());
+//        t1.start();
+//        t2.start();
+//        System.out.println("Thread runs over");
 
         //用序列化破坏单例模式
 //        HungrySingleton singleton = HungrySingleton.getInstance();

@@ -14,8 +14,6 @@ public class HungrySingleton implements Serializable {
 
     private static final HungrySingleton singleton;
     private static final long serialVersionUID = 2389789839637172279L;
-//    private static final long serialVersionUID = 2389789839637172279L;
-//    private static final long serialVersionUID = 2479405706272276107L;
 
     private HungrySingleton(){}
 
@@ -27,6 +25,12 @@ public class HungrySingleton implements Serializable {
         return singleton;
     }
 
+    /**
+     * readResolve方法，如果没这个方法，就反序列化就会破坏单例。
+     * 有这个方法，反序列化就不会破坏单例。
+     * 这个方法的方法名一定要是：readResovle()
+     * @return
+     */
     public Object readResolve(){
         return singleton;
     }
